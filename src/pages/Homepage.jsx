@@ -16,7 +16,7 @@ const Homepage = () => {
 
     const getPosts = async () => {
         try {
-            const response = await fetch(`http://localhost:5050/post?page=${page}&pageSize=${pageSize}`)
+            const response = await fetch(`${process.env.REACT_APP_BASE_URL}/post?page=${page}&pageSize=${pageSize}`)
             const data = await response.json()
             setData(data)
         } catch (error) {

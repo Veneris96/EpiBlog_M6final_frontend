@@ -17,7 +17,7 @@ const AddPostForm = () => {
         const fileData = new FormData()
         fileData.append("img", file)
         try {
-            const response = await fetch("http://localhost:5050/post/uploadImg", {
+            const response = await fetch(`${process.env.REACT_APP_BASE_URL}/cloudUpload`, {
                 method: "POST",
                 body: fileData
             })
@@ -38,7 +38,7 @@ const AddPostForm = () => {
                     author: loggedUser._id,
                     img: uploadedFile.img
                 }
-                const response = await fetch("http://localhost:5050/post", {
+                const response = await fetch(`${process.env.REACT_APP_BASE_URL}/post`, {
                     method: "POST",
                     headers: {
                         "Content-type": "application/json"

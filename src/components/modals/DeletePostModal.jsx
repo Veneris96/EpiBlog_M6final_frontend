@@ -8,7 +8,7 @@ const DeletePostModal = ({post, postID}) => {
 
     const deletePost = async () => {
         try {
-            const response = await fetch(`http://localhost:5050/post/${postID}`, {
+            const response = await fetch(`${process.env.REACT_APP_BASE_URL}/post/${postID}`, {
                 method: "DELETE",
                 headers: {
                     "Content-type": "application/json"
