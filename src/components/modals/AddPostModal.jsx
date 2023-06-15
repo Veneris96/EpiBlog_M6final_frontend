@@ -17,7 +17,7 @@ const AddPostForm = () => {
         const fileData = new FormData()
         fileData.append("img", file)
         try {
-            const response = await fetch(`${process.env.REACT_APP_BASE_URL}/post/cloudUpload`, {
+            const response = await fetch(`${process.env.REACT_APP_CLOUD_UPLOAD_URL}`, {
                 method: "POST",
                 body: fileData
             })
