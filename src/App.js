@@ -10,7 +10,7 @@ function App() {
       <Routes>
         <Route exact path={"/"} element={<Login />} />
         <Route element={<ProtectedRoutes />}>
-          <Route path={'/homepage'} element={<Homepage />} />
+          <Route path={`/homepage`} element={<Homepage />} />
         </Route>
       </Routes>
     </BrowserRouter>
