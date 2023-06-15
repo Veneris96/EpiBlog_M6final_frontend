@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const LogoutModal = () => {
+    const navigate = useNavigate()
 
     const [isOpen, setIsOpen] = useState(false)
 
     const logout = () => {
         localStorage.removeItem("loggedIn")
-        window.location.reload()
+        navigate("/")
     }
 
     return (

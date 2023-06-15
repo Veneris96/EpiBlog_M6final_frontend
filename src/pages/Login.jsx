@@ -2,17 +2,17 @@ import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+    const navigate = useNavigate()
+
     const [formData, setFormData] = useState({
         email: "",
         password: ""
     })
 
-    const navigate = useNavigate()
-
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem("loggedIn"))
         if (user && user?.email > 0) {
-            navigate("../homepage", { replace: true })
+            navigate("/homepage", { replace: true })
         }
     }, [navigate])
 

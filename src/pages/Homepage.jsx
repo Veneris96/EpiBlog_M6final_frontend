@@ -52,7 +52,8 @@ const Homepage = () => {
                                     <div className='img-container flex flex-col justify-start'>
                                         <img
                                             className='rounded-t-md rounded-b-sm h-[300px] max-w-[100%]'
-                                            src={post.img} />
+                                            src={post.img}
+                                            alt='post-img' />
                                     </div>
                                     <hr />
                                     <div className='card-body p-3'>
@@ -95,7 +96,7 @@ const Homepage = () => {
                     }>
                     <option value={3}>3</option>
                     <option value={6}>6</option>
-                    <option value={10}>10</option>
+                    <option value={9}>9</option>
                 </select>
             </div >
             <div className='mt-5 flex flex-row justify-center'>

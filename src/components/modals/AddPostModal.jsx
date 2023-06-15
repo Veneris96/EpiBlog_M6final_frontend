@@ -17,7 +17,7 @@ const AddPostForm = () => {
         const fileData = new FormData()
         fileData.append("img", file)
         try {
-            const response = await fetch(`${process.env.REACT_APP_BASE_URL}/cloudUpload`, {
+            const response = await fetch(`${process.env.REACT_APP_BASE_URL}/post/cloudUpload`, {
                 method: "POST",
                 body: fileData
             })
@@ -46,7 +46,7 @@ const AddPostForm = () => {
                     body: JSON.stringify(postFormData)
                 })
                 alert("Post submitted succesfully")
-                window.location.reload()
+                window.location.href = (`${process.env.REACT_APP_INDEX}/homepage`)
             } catch (error) {
                 console.error("Post not submitted" + error)
             }
@@ -80,7 +80,7 @@ const AddPostForm = () => {
                                 <h5 className='font-bold'>Post title: </h5>
                                 <input
                                     required
-                                    className='rounded'
+                                    className='rounded pl-1'
                                     style={{ border: "1px solid black" }}
                                     type='text'
                                     name='title'
@@ -160,6 +160,7 @@ const AddPostForm = () => {
                             </div>
                             <div className='post-close flex flex-wrap gap-2'>
                                 <button
+                                type='reset'
                                     className='close w-32 rounded-lg bg-red-500 hover:bg-red-600 font-bold'
                                     onClick={() => setIsOpen(false)}>Close</button>
                                 <button
