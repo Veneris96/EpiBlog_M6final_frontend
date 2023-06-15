@@ -8,7 +8,7 @@ const Header = () => {
             <h1 className='title text-5xl font-extrabold pt-6'>
                 <a
                     className='text-transparent bg-clip-text bg-gradient-to-tr from-purple-600 to-blue-400'
-                    href='/homepage'>EpiBlog</a>
+                    href={`${process.env.REACT_APP_INDEX}/homepage`}>EpiBlog</a>
             </h1>
             <div className='buttons w-auto flex flex-col justify-evenly'>
                 <LogoutModal />

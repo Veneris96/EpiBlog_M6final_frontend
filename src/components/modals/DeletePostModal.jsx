@@ -17,7 +17,7 @@ const DeletePostModal = ({post, postID}) => {
             const posts = await response.json()
             setPosts(posts)
             alert("Post successfully deleted")
-            window.location.assign = (`${process.env.REACT_APP_INDEX}/homepage`)
+            window.location.href = (`${process.env.REACT_APP_INDEX}/homepage`)
         } catch (error) {
 
         }

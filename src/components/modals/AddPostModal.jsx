@@ -46,7 +46,7 @@ const AddPostForm = () => {
                     body: JSON.stringify(postFormData)
                 })
                 alert("Post submitted succesfully")
-                window.location.href = (`${process.env.REACT_APP_INDEX}/homepage`)
+                window.location.assign = (`${process.env.REACT_APP_INDEX}/homepage`)
             } catch (error) {
                 console.error("Post not submitted" + error)
             }
